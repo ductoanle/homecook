@@ -5,3 +5,4 @@ child(:owner => :owner) do
   child(:images){attributes :name}
 end
 child(:places){attributes :id, :address, :timeslot}
+child(:images){attributes :name}
