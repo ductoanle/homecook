@@ -19,6 +19,9 @@ Rails.application.routes.draw do
       get 'orders' => 'orders#index'
       patch 'order/:id/confirm' => 'orders#confirm'
 
+      # Places
+      get 'places' => 'places#areas'
+
     end
   end
 

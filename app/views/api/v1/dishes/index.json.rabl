@@ -1,5 +1,5 @@
 object @dishes
-attributes :id, :name, :price, :quantity, :category, :last_order
+attributes :id, :name, :price, :quantity, :category, :last_order, :description
 child(:owner => :owner) do
   attributes :id, :username
   child(:images){attributes :name}
