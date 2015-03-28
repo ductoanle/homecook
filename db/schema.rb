@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20150328145554) do
     t.integer "dish_id"
     t.integer "buyer_id"
     t.integer "place_id"
-    t.string  "status"
+    t.integer "status",   default: 0
     t.float   "total"
     t.integer "quantity"
   end

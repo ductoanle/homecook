@@ -25,7 +25,7 @@ module Api
         end
 
         place = @place.present? ? @place : @dish.places.first
-        @order = Order.new(dish: @dish, place: @place, buyer: current_user, quantity: order_params[:quantity], total: calculate_total(@dish.price, order_params[:quantity].to_i), status: 'confirmed')
+        @order = Order.new(dish: @dish, place: @place, buyer: current_user, quantity: order_params[:quantity], total: calculate_total(@dish.price, order_params[:quantity].to_i))
 
         unless @order.check_quantity_available(@dish)
           unprocessable_entity_error('The dish was sold out')
