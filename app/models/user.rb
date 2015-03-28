@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
   validate :email_regex
 
   has_many :images, as: :resource
-  has_many :dishes
+  has_many :dishes, foreign_key: :owner_id
   has_many :orders, through: :dishes
-  has_many :places
+  has_many :places, foreign_key: :owner_id
 
   def purchase_order
     Order.where(buyer_id: self.id).to_a

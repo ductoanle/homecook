@@ -3,4 +3,5 @@ class Dish < ActiveRecord::Base
 
   belongs_to :owner, class_name: 'User'
   has_many :images, as: :resource
+  has_many :places, through: :owner
 end

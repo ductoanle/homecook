@@ -18,10 +18,8 @@ gem 'pg', '~> 0.18.1'
 gem 'awesome_print', '~> 1.6.1'
 # A better alternative to rake task, making your script standard ruby object
 gem 'thor', '~> 0.19.1'
-gem 'pghero', '~> 0.1.9'
 gem 'hiredis', '~> 0.6.0'
 gem "redis",'~> 3.2.1', :require => ["redis", "redis/connection/hiredis"]
-gem 'braintree', '~> 2.40.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

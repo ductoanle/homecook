@@ -10,15 +10,14 @@ Rails.application.routes.draw do
       # Session
       post 'sessions/sign_in' => 'sessions#create', as: :sign_in
 
-      #Account
-      post 'accounts/create' => 'accounts#create', as: :create
-      get 'accounts/info' => 'accounts#info', as: :info
+      # Dish
+      get 'dishes' => 'dishes#index'
+      get 'dishes/:id' => 'dishes#show'
+
     end
   end
 
   get 'unauthorized' => 'errors/index', as: :unauthorize, defaults: {format: 'json'}
-
-  mount PgHero::Engine, at: "pghero"
 
 
 

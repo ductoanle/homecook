@@ -11,27 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150319071405) do
+ActiveRecord::Schema.define(version: 20150328021514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "accounts", force: true do |t|
-    t.string  "name"
-    t.integer "owner_id"
+  create_table "categories", force: true do |t|
+    t.string "name"
   end
 
-  create_table "members", force: true do |t|
-    t.integer "user_id"
-    t.integer "account_id"
-  end
-
-  create_table "plans", force: true do |t|
+  create_table "dishes", force: true do |t|
     t.string   "name"
+    t.integer  "owner_id"
     t.float    "price"
-    t.string   "braintree_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "quantity"
+    t.datetime "last_order"
+    t.string   "category"
+  end
+
+  create_table "images", force: true do |t|
+    t.string  "url"
+    t.integer "resource_id"
+    t.string  "resource_type"
+  end
+
+  create_table "orders", force: true do |t|
+    t.integer "dish_id"
+    t.integer "buyer_id"
+    t.integer "place_id"
+    t.string  "status"
+    t.float   "total"
+    t.integer "quantity"
+  end
+
+  create_table "places", force: true do |t|
+    t.string  "address"
+    t.float   "longitude"
+    t.float   "latitude"
+    t.string  "timeslot"
+    t.integer "owner_id"
   end
 
   create_table "users", force: true do |t|
