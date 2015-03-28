@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       # Order
       post 'orders' => 'orders#create'
       get 'orders' => 'orders#index'
+      patch 'order/:id/confirm' => 'orders#confirm'
 
     end
   end

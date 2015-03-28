@@ -72,6 +72,17 @@ module Api
         end
       end
 
+      def confirm
+        @order = Order.find(params[:id])
+        begin
+          MoneyTransferService.transfer(@order)
+        rescue Exception => e
+          unprocessable_entity_error("Error creating order #{e}")
+          return
+        end
+        render :show
+      end
+
       private
       def calculate_total(price, quantity)
         return price * quantity
