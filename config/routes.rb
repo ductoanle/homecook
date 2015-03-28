@@ -14,6 +14,10 @@ Rails.application.routes.draw do
       get 'dishes' => 'dishes#index'
       get 'dishes/:id' => 'dishes#show'
 
+      # Order
+      post 'orders' => 'orders#create'
+      get 'orders' => 'orders#index'
+
     end
   end
 
