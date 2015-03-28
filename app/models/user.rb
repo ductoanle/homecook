@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   has_many :dishes, foreign_key: :owner_id
   has_many :orders, through: :dishes
   has_many :places, foreign_key: :owner_id
+  has_one :address
+  has_one :card, foreign_key: :owner_id
 
   def purchase_order
     Order.where(buyer_id: self.id).to_a
