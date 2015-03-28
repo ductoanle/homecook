@@ -10,7 +10,11 @@ module Api
         if current_user.present?
           @dishes = current_user.dishes
         else
-          @dishes = Dish.all
+          if params[:area].present?
+            @dishes = Dish.find_by_area(params[:area])
+          else
+            @dishes = Dish.all
+          end
         end
       end
 

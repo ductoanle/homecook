@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150328050706) do
+ActiveRecord::Schema.define(version: 20150328122705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150328050706) do
     t.integer  "quantity"
     t.datetime "last_order"
     t.string   "category"
-    t.string   "description"
+    t.text     "description"
   end
 
   create_table "images", force: true do |t|
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150328050706) do
     t.float   "latitude"
     t.string  "timeslot"
     t.integer "owner_id"
+    t.string  "area"
   end
 
   create_table "users", force: true do |t|

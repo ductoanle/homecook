@@ -18,6 +18,9 @@ Rails.application.routes.draw do
       post 'orders' => 'orders#create'
       get 'orders' => 'orders#index'
 
+      # Places
+      get 'places' => 'places#areas'
+
     end
   end
 
