@@ -21,7 +21,7 @@ module Api
       def create
         if current_user.present? && @dish.present?
           place = @place.present? ? @place : @dish.places.first
-          @order = Order.new(dish: @dish, place: @place, buyer: current_user, quantity: order_params[:quantity], total: calculate_total(@dish.price, order_params[:quantity].to_i), status: 'confirmed')
+          @order = Order.new(dish: @dish, place: @place, buyer: current_user, quantity: order_params[:quantity], total: calculate_total(@dish.price, order_params[:quantity].to_i))
           if @order.check_quantity_available(@dish) && @order.save
             # should be in a transaction here
             @dish.quantity -= @order.quantity

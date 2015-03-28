@@ -76,6 +76,39 @@ dish_9.images << Image.create(name: 'dish_9_1.jpg')
 dish_10 = Dish.create(name: 'Sushi', price: 7.99, quantity: 10, category: 'Japanese', owner_id: sakura.id, last_order: 3.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
 dish_10.images << Image.create(name: 'dish_10_1.jpg')
 
+dish_11 = Dish.create(name: 'French Onion Soup', price: 4.99, quantity: 10, category: 'French, Western, Soup', owner_id: isadora.id, last_order: 3.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_11.images << Image.create(name: 'dish_11_1.jpg')
+
+dish_12 = Dish.create(name: 'Spaghetti Bolognese with Soft Boiled Egg', price: 5.99, quantity: 6, category: 'Italian, Western, Noodle, Egg', owner_id: lyndis.id, last_order: 1.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_12.images << Image.create(name: 'dish_12_1.jpg')
+
+dish_13 = Dish.create(name: 'Sambal Laksa', price: 5.99, quantity: 6, category: 'Malay, Asian, Noodle, Curry', owner_id: avatar.id, last_order: 1.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_13.images << Image.create(name: 'dish_13_1.jpg')
+
+dish_14 = Dish.create(name: 'Oshiruko - Japanese Red Bean Soup', price: 5.99, quantity: 6, category: 'Japanese, Asian, Dessert', owner_id: sakura.id, last_order: 1.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_14.images << Image.create(name: 'dish_14_1.jpg')
+
+dish_15 = Dish.create(name: 'Dorayaki - Red Bean Pan Cake', price: 5.99, quantity: 6, category: 'Japanese, Asian, Dessert', owner_id: sakura.id, last_order: 1.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_15.images << Image.create(name: 'dish_15_1.jpg')
+
+dish_16 = Dish.create(name: 'Sisig Tacos', price: 5.99, quantity: 6, category: 'Filipino, Asian, Pork, Sisig', owner_id: maria.id, last_order: 1.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_16.images << Image.create(name: 'dish_16_1.jpg')
+
+dish_16 = Dish.create(name: 'Sisig Tacos', price: 5.99, quantity: 6, category: 'Filipino, Asian, Pork, Sisig', owner_id: maria.id, last_order: 1.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_16.images << Image.create(name: 'dish_16_1.jpg')
+
+dish_17 = Dish.create(name: 'Broken Rice', price: 4.99, quantity: 6, category: 'Vietnamese, Asian, Pork, Egg', owner_id: mai.id, last_order: 1.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_17.images << Image.create(name: 'dish_17_1.jpg')
+
+dish_18 = Dish.create(name: 'Prawn Cake', price: 1.99, quantity: 10, category: 'Vietnamese, Asian, Prawn, Egg', owner_id: mai.id, last_order: 1.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_18.images << Image.create(name: 'dish_18_1.jpg')
+
+dish_18 = Dish.create(name: 'Prawn Cake', price: 1.99, quantity: 10, category: 'Vietnamese, Asian, Prawn, Egg', owner_id: mai.id, last_order: 1.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+dish_18.images << Image.create(name: 'dish_18_1.jpg')
+
+
+
+
 Place.delete_all
 Place.create(address: 'Bishan MRT', timeslot: '6:30pm', area: 'Bishan', owner_id: lyndis.id)
 Place.create(address: 'City Hall MRT', timeslot: '6:00 pm', area: 'City Hall', owner_id: lyndis.id)
