@@ -1,0 +1,2 @@
+Simplify::public_key = "sbpb_OTViYjIzZDctMDU4ZC00NDAyLTk2NDgtMjY5MTMwYTUwMzVm"
+Simplify::private_key = "m5FKXWzjL4HB2t1M6dxerC5w4nWNn5KNz7pKFsBMy315YFFQL0ODSXAOkNtXTToq"

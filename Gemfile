@@ -21,6 +21,8 @@ gem 'thor', '~> 0.19.1'
 gem 'hiredis', '~> 0.6.0'
 gem "redis",'~> 3.2.1', :require => ["redis", "redis/connection/hiredis"]
 
+gem 'simplify', '~> 1.2.0'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', '~> 0.4.0'
