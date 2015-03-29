@@ -8,7 +8,6 @@ class Order < ActiveRecord::Base
   belongs_to :buyer, class_name: 'User'
 
   def check_quantity_available(dish)
-    return false if self.quantity > dish.quantity
-    true
+    self.quantity > dish.quantity
   end
 end

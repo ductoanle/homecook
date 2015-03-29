@@ -12,7 +12,7 @@ module Api
       def index
         if current_user.present?
           type = params[:type] || TYPE_BUYER
-          @orders = Order.find_by_buyer_id(current_user.id)
+          @orders = params[:all].blank? ? Order.where(buyer_id: current_user.id, status: Order.statuses[:not_confirmed]) : Order.find_by_buyer_id(current_user.id)
         else
           unprocessable_entity_error('User is not logged in or missing dish')
         end
@@ -101,7 +101,7 @@ module Api
       end
 
       def order_params
-        params.permit(:simplify_token, :username, :format, :dish_id, :place_id, :user_id, :quantity)
+        params.permit(:simplify_token, :username, :format, :dish_id, :place_id, :user_id, :quantity, :all)
       end
       def load_dish
         @dish = Dish.find_by_id(params[:dish_id])
