@@ -101,7 +101,7 @@ module Api
       end
 
       def order_params
-        params.permit(:dish_id, :place_id, :user_id, :quantity)
+        params.permit(:simplify_token, :username, :format, :dish_id, :place_id, :user_id, :quantity)
       end
       def load_dish
         @dish = Dish.find_by_id(params[:dish_id])

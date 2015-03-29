@@ -11,9 +11,9 @@ module Api
           @dishes = current_user.dishes
         else
           if params[:area].present?
-            @dishes = Dish.find_by_area(params[:area])
+            @dishes = Dish.includes(:images).find_by_area(params[:area])
           else
-            @dishes = Dish.all
+            @dishes = Dish.includes(:images).all
           end
         end
       end
