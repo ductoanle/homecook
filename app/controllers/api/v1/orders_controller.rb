@@ -19,8 +19,13 @@ module Api
       end
 
       def create
-        unless current_user.present? && @dish.present?
-          unprocessable_entity_error('User is not logged in or missing dish')
+        unless current_user.present?
+          unprocessable_entity_error('User is not logged in')
+          return
+        end
+
+        unless @dish.present?
+          unprocessable_entity_error("Dish is missing #{params[:dish_id]}")
           return
         end
 
