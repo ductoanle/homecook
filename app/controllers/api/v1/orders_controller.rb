@@ -12,7 +12,7 @@ module Api
       def index
         if current_user.present?
           type = params[:type] || TYPE_BUYER
-          @orders = params[:all].blank? ? Order.where(buyer_id: current_user.id, status: Order.statuses[:not_confirmed]) : Order.find_by_buyer_id(current_user.id)
+          @orders = params[:all].blank? ? Order.where(buyer_id: current_user.id, status: Order.statuses[:not_confirmed]).to_a : Order.where(buyer_id: current_user.id).to_a
         else
           unprocessable_entity_error('User is not logged in or missing dish')
         end
