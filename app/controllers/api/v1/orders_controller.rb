@@ -74,8 +74,15 @@ module Api
 
       def confirm
         @order = Order.includes(dish: {owner: [:address, :card]}).find(params[:id])
+
+        if @order.confirmed?
+          unprocessable_entity_error("Order is already confirmed")
+          return
+        end
+
         begin
           MoneyTransferService.transfer(@order, @order.dish.owner)
+          @order.confirmed!
         rescue Mastercard::ApiException => e
           unprocessable_entity_error("Error creating order #{e}")
           return
