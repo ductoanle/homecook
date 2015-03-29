@@ -5,8 +5,6 @@ require 'net/https'
 require 'openssl'
 require 'digest/sha1'
 require 'securerandom'
-require_relative 'oauth_parameters'
-require_relative 'oauth_constants'
 
 module Mastercard
   module Common
@@ -53,11 +51,11 @@ module Mastercard
 =end
       def oauth_parameters_factory
         oparams = Mastercard::Common::OAuthParameters.new
-        oparams.add_parameter(OAUTH_CONSUMER_KEY, @consumer_key)
-        oparams.add_parameter(OAUTH_NONCE, generate_nonce)
-        oparams.add_parameter(OAUTH_TIMESTAMP, generate_timestamp)
-        oparams.add_parameter(OAUTH_SIGNATURE_METHOD, "RSA-SHA1")
-        oparams.add_parameter(OAUTH_VERSION, "1.0")
+        oparams.add_parameter(Mastercard::Common::OAUTH_CONSUMER_KEY, @consumer_key)
+        oparams.add_parameter(Mastercard::Common::OAUTH_NONCE, generate_nonce)
+        oparams.add_parameter(Mastercard::Common::OAUTH_TIMESTAMP, generate_timestamp)
+        oparams.add_parameter(Mastercard::Common::OAUTH_SIGNATURE_METHOD, "RSA-SHA1")
+        oparams.add_parameter(Mastercard::Common::OAUTH_VERSION, "1.0")
         oparams
       end
       
@@ -83,6 +81,7 @@ module Mastercard
           oauth_params = generate_body_hash(body, oauth_params)
         end
         response = connect(url, request_method, oauth_params, body)
+        puts body
         check_response(response)
         response.body
       end

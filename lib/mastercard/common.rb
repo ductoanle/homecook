@@ -1,5 +1,7 @@
 module Mastercard
   module Common
+    SANDBOX = 'sandbox' unless const_defined?(:SANDBOX)
+    PRODUCTION = 'production' unless const_defined?(:PRODUCTION)
 
     OAUTH_BODY_HASH = 'oauth_body_hash'
     OAUTH_CONSUMER_KEY = 'oauth_consumer_key'
@@ -8,6 +10,5 @@ module Mastercard
     OAUTH_SIGNATURE_METHOD = 'oauth_signature_method'
     OAUTH_TIMESTAMP = 'oauth_timestamp'
     OAUTH_VERSION = 'oauth_version'
-
   end
 end

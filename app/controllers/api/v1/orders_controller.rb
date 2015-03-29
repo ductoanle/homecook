@@ -73,13 +73,13 @@ module Api
       end
 
       def confirm
-        @order = Order.find(params[:id])
-        begin
-          MoneyTransferService.transfer(@order)
-        rescue Exception => e
-          unprocessable_entity_error("Error creating order #{e}")
-          return
-        end
+        @order = Order.includes(dish: {owner: [:address, :card]}).find(params[:id])
+        #begin
+          MoneyTransferService.transfer(@order, @order.dish.owner)
+        #rescue Exception => e
+        #  unprocessable_entity_error("Error creating order #{e}")
+        #  return
+        #end
         render :show
       end
 
