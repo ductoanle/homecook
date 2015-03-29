@@ -7,7 +7,6 @@
 #   Mayor.create(name: 'Emanuel'city: cities.first)
 
 User.delete_all
-User.connection.execute('ALTER SEQUENCE user_id_seq RESTART WITH 1')
 avatar =  User.create(username: 'avatar', email: 'avatar@gmail.com', password: 'asdfgh', password_confirmation: 'asdfgh', real_name: 'Peter Chan')
 avatar.images << Image.create(name: 'avatar.jpg')
 Address.create(line1: '18 Raffles Quay', line2: '#16-174', city: 'Singapore', country_subdivision: 'sg', postal_code: '174744', country: 'SGP', user_id: avatar.id)
@@ -38,7 +37,6 @@ maria.update_attribute(:address, Address.create(line1: '14 Nanyang Crescent', li
 Card.create(account_number:'5184680430000030', expiry_month: 12, expiry_year: 2019, cvc: 111, owner_id: maria.id)
 
 Dish.delete_all
-User.connection.execute('ALTER SEQUENCE user_id_seq RESTART WITH 1')
 dish_1 = Dish.create(name: 'Chinese Roast Pork Belly', price: 5.99, quantity: 5, category: 'Chinese, Asian, Pork', owner_id: micaiah.id, last_order: 6.hours.from_now, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
 dish_1.images << Image.create(name: 'dish_1_1.jpg')
 dish_1.images << Image.create(name: 'dish_1_2.jpg')
@@ -124,5 +122,7 @@ Place.create(address: 'Harbour Front MRT', timeslot: '6:00 pm',  area: 'Habour F
 Place.create(address: 'Serangoon MRT', timeslot: '6:30pm',  area: 'Serangoon', owner_id: sakura.id)
 Place.create(address: 'Tiong Bahru MRT', timeslot: '6pm', area:'Tiong Bahru', owner_id: mai.id)
 Place.create(address: 'Lakeside MRT', timeslot: '6:30pm', area: 'Jurong', owner_id: mai.id)
+Place.create(address: 'Tiong Bahru MRT', timeslot: '6pm', area:'Tiong Bahru', owner_id: maria.id)
+Place.create(address: 'Lakeside MRT', timeslot: '6:30pm', area: 'Jurong', owner_id: maria.id)
 
 Order.delete_all
