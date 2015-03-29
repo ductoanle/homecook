@@ -73,7 +73,12 @@ module Api
       end
 
       def confirm
-        @order = Order.includes(dish: {owner: [:address, :card]}).find(params[:id])
+        @order = Order.includes(dish: {owner: [:address, :card]}).find_by_id(params[:id])
+
+        unless @order
+          unprocessable_entity_error("Order doesn't exist")
+          return
+        end
 
         if @order.confirmed?
           unprocessable_entity_error("Order is already confirmed")
