@@ -236,7 +236,7 @@ module Mastercard
        
       def check_response(response)
         if response.code.to_i >= ERROR_STATUS_BOUNDARY
-          raise 'Response Code: ' << response.code.to_s << "\n" << response.body
+          raise Mastercard::ApiException.new('Response Code: ' << response.code.to_s << "\n" << response.body)
         end
       end
       
